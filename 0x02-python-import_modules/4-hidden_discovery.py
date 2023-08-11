@@ -1,8 +1,11 @@
 #!/usr/bin/python3
+# 4-hiden_discovery.py
 
+if __name__ == "_main_":
+    """print all names defined by hiden_4 module."""
+    import hiden_4
 
-def my_function():
-
-    for count in dir(hidden_4):
-        if count[0] != "_" and count[1] != "_":
-            print(count)
+    names = dir(hidden_4)
+    for name in names:
+        if name[:2] != "_":
+            print(name)
