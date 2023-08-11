@@ -1,2 +1,3 @@
-#!user/bin/python3
-print(''.join(list(map(chr, range(65, 91)))))
+#!/usr/bin/python3
+from fast_alphabet import printalphabet
+printalphabet()
