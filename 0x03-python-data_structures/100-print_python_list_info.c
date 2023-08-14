@@ -1,21 +1,11 @@
-<<<<<<< HEAD
-/*
-* File: 100-print_python_list_info.c
-
-*/
-
-#include <Python.h>
+#include "Python.h"
 
 /**
 * print_python_list_info - Prints basic info about Python lists.
 * @p: A PyObject list.
 */
-void print_python_list_info(PyObject *p)
-=======
-#include <Python.h>
 
-void print_python_list_info(PyObject *p);
->>>>>>> 28d65fe447305dfdae639c63a4f73abec69dad0b
+void print_python_list_info(PyObject *p)
 {
 int size, alloc, i;
 PyObject *obj;
