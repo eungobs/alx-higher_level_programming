@@ -1,45 +1,21 @@
-<<<<<<< HEAD
-/*
-* File: 100-print_python_list_info.c
-
-*/
-
-#include <Python.h>
-
-/**
-* print_python_list_info - Prints basic info about Python lists.
-* @p: A PyObject list.
-*/
-void print_python_list_info(PyObject *p)
-=======
-#include <Python.h>
-
-<<<<<<< HEAD
-/**
-* print_python_list_info - Prints basic info about Python lists.
-* @p: A PyObject list.
-*/
+#include "/usr/include/python3.8/Python.h"
+#include "/usr/include/python3.8/listobject.h"
+#include "/usr/include/python3.8/object.h"
+#include <stdio.h>
 
 void print_python_list_info(PyObject *p)
-=======
-void print_python_list_info(PyObject *p);
->>>>>>> 28d65fe447305dfdae639c63a4f73abec69dad0b
->>>>>>> 45fb2f01a550cc27fd4bf0b55c8bcbe224fc6bbb
 {
-int size, alloc, i;
-PyObject *obj;
+    int i = 0, list_len = 0;
+    PyObject *item;
+    PyListObject *clone = (PyListObject *) p;
 
-size = Py_SIZE(p);
-alloc = ((PyListObject *)p)->allocated;
+    list_len = Py_SIZE(p);
+    printf("[*] Size of the Python List = %d\n", list_len);
+    printf("[*] Allocated = %d\n", (int) clone->allocated);
 
-printf("[*] Size of the Python List = %d ", size);
-printf("[*] Allocated = %d ", alloc);
-
-for (i = 0; i < size; i++)
-{
-printf("Element %d: ", i);
-
-obj = PyList_GetItem(p, i);
-printf("%s ", Py_TYPE(obj)->tp_name);
-}
+    for (; i < list_len; ++i)
+    {
+        item = PyList_GET_ITEM(p, i);
+        printf("Element %d: %s\n", i, item->ob_type->tp_name);
+    }
 }
