@@ -15,4 +15,18 @@ def square_matrix_simple(matrix=[]):
          Each value should be the square of the value of the input
     """
 
-    return ([list(map(lambda x: x * x, row)) for row in matrix])
+    return [[x * x for x in row] for row in matrix]
+
+# Original matrix
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Compute squared matrix
+squared_matrix = square_matrix_simple(matrix)
+
+# Print both matrices side by side
+for orig_row, squared_row in zip(matrix, squared_matrix):
+    print(orig_row, squared_row)
