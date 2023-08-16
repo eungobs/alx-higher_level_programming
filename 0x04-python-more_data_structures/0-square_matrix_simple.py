@@ -1,30 +1,18 @@
-#!usr/bin/bash/python3
+#!/usr/bin/python3
 def square_matrix_simple(matrix=[]):
-    # Create an empty matrix to store squared values
-    squared_matrix = []
-    
-    # Iterate through each row in the input matrix
-    for row in matrix:
-        squared_row = []
-        
-        # Iterate through each element in the row and square it
-        for element in row:
-            squared_element = element ** 2
-            squared_row.append(squared_element)
-        
-        # Add the squared row to the squared matrix
-        squared_matrix.append(squared_row)
-    
-    return squared_matrix
+    """
+    Computes the square value of all integers of a matrix
+    ...
 
-# Example matrix
-matrix = [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-]
+    Parameters
+    ----------
+    matrix : list (of lists)
+        The list of elements
 
-# Call the function and print the result
-result = square_matrix_simple(matrix)
-for row in result:
-    print(row)
+    Return:
+        a new matrix:
+         Same size as matrix
+         Each value should be the square of the value of the input
+    """
+
+    return ([list(map(lambda x: x * x, row)) for row in matrix])
