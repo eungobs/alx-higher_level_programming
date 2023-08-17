@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-
+#!/usr/bin/python3
 square_matrix_simple = __import__('0-square_matrix_simple').square_matrix_simple
 
 matrix = [
@@ -8,6 +7,6 @@ matrix = [
     [7, 8, 9]
 ]
 
-result = square_matrix_simple(matrix)
-for row in result:
-    print(row)
+new_matrix = square_matrix_simple(matrix)
+print(new_matrix)
+print(matrix)
