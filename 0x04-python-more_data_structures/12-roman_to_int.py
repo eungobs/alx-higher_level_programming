@@ -1,37 +1,28 @@
-#!/usr/bin/python3
-
 def roman_to_int(roman_string):
+    if not roman_string or not isinstance(roman_string, str):
+        return 0
+    
     roman_dictionary = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
                         'C': 100, 'D': 500, 'M': 1000}
+    
     result = 0
-    item = 0
-    roman = roman_string
-    if type(roman) is not str or len(roman) == 0:
-        return 0
-    for item in range(item, len(roman)):
-        if item < len(roman) - 1 and roman_dictionary[roman[item]] < roman_dictionary[roman[item + 1]]:
-            result -= roman_dictionary[roman[item]]
+    prev_value = 0
+    
+    for char in roman_string[::-1]:
+        value = roman_dictionary[char]
+        
+        if value < prev_value:
+            result -= value
         else:
-            result += roman_dictionary[roman[item]]
+            result += value
+        
+        prev_value = value
+    
     return result
 
-# Test the roman_to_int function with different Roman numeral strings
-roman_numeral = "X"
-integer_value = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is = {integer_value}")
-
-roman_numeral = "VII"
-integer_value = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is = {integer_value}")
-
-roman_numeral = "IX"
-integer_value = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is = {integer_value}")
-
-roman_numeral = "LXXXVII"
-integer_value = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is = {integer_value}")
-
-roman_numeral = "DCCVII"
-integer_value = roman_to_int(roman_numeral)
-print(f"The integer value of {roman_numeral} is = {integer_value}")
+# Test cases
+print(roman_to_int("X"))        # Output: 10
+print(roman_to_int("VII"))      # Output: 7
+print(roman_to_int("IX"))       # Output: 9
+print(roman_to_int("LXXXVII"))  # Output: 87
+print(roman_to_int("DCCVII"))   # Output: 707
