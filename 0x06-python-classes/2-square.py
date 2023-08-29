@@ -16,6 +16,11 @@ class Square:
             raise ValueError("size must be >= 0")
         self.__size = size
 
+    @property
+    def size(self):
+        """Getter method for __size attribute."""
+        return self.__size
+
 if __name__ == "__main__":
     square = Square(5)
-    print(square._Square__size)
+    print(square.size)
