@@ -1,6 +1,11 @@
 #!/usr/bin/python3
-"""Defines a class square"""
+"""Define square generation
+"""
+
 
 class Square:
-    """This class represents a square"""
+    """Class defined for square generation.
+
+    """
+
     pass
