@@ -22,4 +22,4 @@ class Square:
 
 if __name__ == "__main__":
     square = Square(5)
-    print(square.area())  # Prints the area of the square
+    print(square.area())
