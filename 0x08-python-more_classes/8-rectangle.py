@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Defines a class Rectangle
+Defines a class Rectangle.
 """
 
 
 class Rectangle:
     """
-    Class that defines properties of rectangle by: (based on 4-rectangle.py)
+    Class that defines properties of rectangle by: (based on 4-rectangle.py).
 
     Attributes:
         width (int): width of the rectangle.
