@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Module finds all solutions for N queens problem"""
 
-
 import sys
 
 
