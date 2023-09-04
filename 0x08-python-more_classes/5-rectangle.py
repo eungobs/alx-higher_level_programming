@@ -8,10 +8,9 @@ class Rectangle:
     """
     A class Rectangle that defines a rectangle
     """
-
     def __init__(self, width=0, height=0):
         """
-        Initializes private attribute width and height
+        Create new instances of Rectangle
         """
         self.width = width
         self.height = height
