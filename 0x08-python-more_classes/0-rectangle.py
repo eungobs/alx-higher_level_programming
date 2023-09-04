@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Create a rectangle class """
 
+
 class Rectangle:
-    """This class represent a simple rectangle"""
+    """This class represents a simple rectangle"""
     pass
