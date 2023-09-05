@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-# Author: Elizabeth E Ndzukule
 """Unittests for max_integer([..])."""
 
 import unittest
