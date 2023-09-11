@@ -1,20 +1,37 @@
 #!/usr/bin/python3
-"""Module 100-my_int
-Creates a class that inherits from int
+"""Module 11-square
+Creates a Square Class
 """
 
 
-class MyInt(int):
-    """Class inheriting from int,
-    But reverses the behaviour of != and ==
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Rectangle = __import__('9-rectangle').Rectangle
+
+
+class Square(Rectangle):
+    """Represents a square
+    Private instance attribute size
+    Public method area()
+    Inherits from Rectangle
     """
 
-    def __eq__(self, other):
-        """Equality becomes inequality"""
+    def __init__(self, size):
+        """Initializes a Square
 
-        return super().__ne__(other)
+        Args:
+            - size: size of the square
+        """
 
-    def __ne__(self, other):
-        """Inequality becomes equality"""
+        self.integer_validation("size", size)
+        super().__init__(size, size)
+        self.__size = size
 
-        return super().__eq__(other)
+    def __str__(self):
+        return str("[Square] {}/{}".format(self.__size, self.__size))
+
+    def area(self):
+        """Computes the area of a Square instance
+        Ovewrites the area() method from Rectangle
+        """
+
+        return self.__size ** 2
