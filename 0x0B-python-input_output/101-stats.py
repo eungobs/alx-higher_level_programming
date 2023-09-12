@@ -1,24 +1,15 @@
 #!/usr/bin/python3
+import random
+import sys
+from time import sleep
+import datetime
 
-'''
-Create a function def pascal_triangle(n):
-that returns a list of lists of integers
-representing the Pascal’s triangle of n
-'''
-
-
-def pascal_triangle(n):
-    '''
-    Create a function def pascal_triangle(n):
-    that returns a list of lists of integers
-    representing the Pascal’s triangle of n
-    '''
-    triangle = []
-    for position in range(1, n + 1):
-        triangle.append([1] * position)
-    for y in range(2, n):
-        row = triangle[y]
-        prev_row = triangle[y - 1]
-        for x in range(1, len(row) - 1):
-            row[x] = prev_row[x - 1] + prev_row[x]
-    return triangle
+for i in range(10000):
+    sleep(random.random())
+    sys.stdout.write("{:d}.{:d}.{:d}.{:d} - [{}] "GET /projects/260 HTTP/1.1" {} {} ".format(
+        random.randint(1, 255), random.randint(1, 255), random.randint(1, 255), random.randint(1, 255),
+        datetime.datetime.now(),
+        random.choice([200, 301, 400, 401, 403, 404, 405, 500]),
+        random.randint(1, 1024)
+    ))
+    sys.stdout.flush()
