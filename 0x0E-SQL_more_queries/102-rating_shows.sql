@@ -5,4 +5,4 @@ SELECT `title`, SUM(`rate`) AS `rating`
        INNER JOIN `tv_show_ratings` AS r
        ON t.`id` = r.`show_id`
 GROUP BY `title`
-ORDER BY `rating` DESCRACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;;
+ORDER BY `rating` DESC;
