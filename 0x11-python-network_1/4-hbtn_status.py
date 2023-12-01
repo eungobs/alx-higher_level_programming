@@ -1,11 +1,19 @@
 #!/usr/bin/python3
 """
-requests model
+Script that fetches https://alx-intranet.hbtn.io/status using the requests package
 """
+import requests
 
-if __name__ == '__main__':
-    import requests
-    html = requests.get('https://alx-intranet.hbtn.io/status')
-    print("Body response:")
-    print(" - type: {}".format(html.text.__class__))
-    print(" - content: {}".format(html.text))
+def main():
+    """
+    Function to fetch and display the body response in the required format
+    """
+    url = 'https://alx-intranet.hbtn.io/status'
+    response = requests.get(url)
+    
+    print('Body response:')
+    print('\t- type:', type(response.text))
+    print('\t- content:', response.text)
+
+if __name__ == "__main__":
+    main()
