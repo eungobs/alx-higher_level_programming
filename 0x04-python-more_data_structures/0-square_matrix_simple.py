@@ -15,6 +15,7 @@ def square_matrix_simple(matrix=[]):
          Each value should be the square of the value of the input
     """
 
+<<<<<<< HEAD
     return [[x * x for x in row] for row in matrix]
 
 matrix = [
@@ -27,3 +28,6 @@ squared_matrix = square_matrix_simple(matrix)
 
 for orig_row, squared_row in zip(matrix, squared_matrix):
     print(orig_row, squared_row)
+=======
+    return ([list(map(lambda x: x * x, row)) for row in matrix])
+>>>>>>> a0a689791b04a7744b3c1ade2c7b18275f82b799
